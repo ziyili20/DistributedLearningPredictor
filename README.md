@@ -92,8 +92,8 @@ Arguments of predictor.py:
 +  --window *int* the maximum distance between the current and predicted word within a sentence.
 +  --size *int* the dimension of vector representations.
 +  --decay *int* decay parameter in PDPS model.  Larger decay means less impact of a far-away event.
-  --task *str* "CreateVocab": create vocabulary from an input data.
-               "MergeVocab": merge two vocabularies.
++  --task *str* "CreateVocab": create vocabulary from an input data.
+..*               "MergeVocab": merge two vocabularies.
                "DNCEInit": DNCE initial train.
                "DNCEUpdate": DNCE update train.
                "InitTrain": initial train for naive updates or dropout udpates.  Or calculate gold standard model.
