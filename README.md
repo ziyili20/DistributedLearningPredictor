@@ -93,7 +93,7 @@ Arguments of predictor.py:
 +  --size *int* the dimension of vector representations.
 +  --decay *int* decay parameter in PDPS model.  Larger decay means less impact of a far-away event.
 +  --task *str* 
-                  1. "CreateVocab": create vocabulary from an input data.
+                  ...( "CreateVocab": create vocabulary from an input data.)
                   2. "MergeVocab": merge two vocabularies.
                   3. "DNCEInit": DNCE initial train.
                   4. "DNCEUpdate": DNCE update train.
