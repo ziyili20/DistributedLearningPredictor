@@ -36,7 +36,7 @@ class PDPS(BinaryPredictor):
 #        print(filename)
 #        self.base_train(filename, skipgram=1, mcount=5)
 
-    def dropout_update(self, filename, dropout_round, keep_node_ratio):
+    def dropout_update(self, filename, dropout_round = 10, keep_node_ratio = 0.5):
         logger.info("start dropout update")
         print(filename)
         self.dropout_train(filename, dropout_round, keep_node_ratio)
