@@ -2,7 +2,10 @@
 
 
 ## Introduction
-Electronic Health Record (EHR) data from multiple hospitals are usually hard to transfer or store at one place for privacy concerns or regulatory hurdles.  Following the work of Farhan et al. (2016), we develop three models which can learn from multiple databases distributedly and at the same time make predictions for patient diagnoses.  Our package provides a small synthetic data including a training data set and a testing data set.  To mimic the situation when the data from two hospitals cannot be obtained at the same time, we equally split the training data to two parts as our example data.
+Electronic Health Record (EHR) data from multiple hospitals are usually hard to transfer or store at one place for privacy concerns or regulatory hurdles.  Following the work of Farhan et al. (2016), we develop three models which can learn from multiple databases distributedly and at the same time make predictions for patient diagnoses.  
+
+## Sample data
+Our package provides a small sample data including a training data set and a testing data set.  To mimic the situation when the data from two hospitals cannot be obtained at the same time, we split the training data to two parts as our example data.  We purposely choose a small dataset as the second part data to shorten the computational time using dropout update.  
 
 ## Real data preparation
 
@@ -89,3 +92,6 @@ This project depends on:
 2. ICD9 - https://github.com/sirrice/icd9
 3. ICD9 - https://github.com/kshedden/icd9
 4. gensim - http://radimrehurek.com/gensim/
+
+## Sample data reference:
+MIMIC-III, a freely accessible critical care database. Johnson AEW, Pollard TJ, Shen L, Lehman L, Feng M, Ghassemi M, Moody B, Szolovits P, Celi LA, and Mark RG. Scientific Data (2016). DOI: 10.1038/sdata.2016.35. Available from: http://www.nature.com/articles/sdata201635
