@@ -93,16 +93,15 @@ Arguments of predictor.py:
 +  --size *int* the dimension of vector representations.
 +  --decay *int* decay parameter in PDPS model.  Larger decay means less impact of a far-away event.
 +  --task *str* 
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-+      "CreateVocab": create vocabulary from an input data. 
-+      "MergeVocab": merge two vocabularies.
-                  + "DNCEInit": DNCE initial train.
-                  - "DNCEUpdate": DNCE update train.
-                  - "InitTrain": initial train for naive updates or dropout udpates.  Or calculate gold standard model.
-                  - “NaiveUpdate”: Naive update train.
-                  - "DropoutUpdate": Dropout update train.
-                  - "CalcPTK": Calculate the PTK of one target model versus gold standard model.
-                  - "CalcStats": Calculate the stats including AUC. 
+1. "CreateVocab": create vocabulary from an input data. 
+2. "MergeVocab": merge two vocabularies.
+3. "DNCEInit": DNCE initial train.
+4. "DNCEUpdate": DNCE update train.
+5. "InitTrain": initial train for naive updates or dropout udpates.  Or calculate gold standard model.
+6. “NaiveUpdate”: Naive update train.
+7. "DropoutUpdate": Dropout update train.
+8. "CalcPTK": Calculate the PTK of one target model versus gold standard model.
+9. "CalcStats": Calculate the stats including AUC. 
 +  --inputfilename *str* the name of a input data file.
 +  --outputfilename1 *str* the name of an output/input data file.
 +  --outputfilename2 *str* the name of another output/input data file.
