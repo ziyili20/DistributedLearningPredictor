@@ -34,6 +34,10 @@ Create vocabulary for the second dataset
 Merge two vocabularies and initialize an empty global model
 
     python predictor.py --window 30 --size 350 --decay 8 --task MergeVocab --outputfilename1 raw_vocab_example1.pkl --outputfilename2 raw_vocab_example2.pkl --savemodelname initglobalmodel.pkl
+    
+Another version to merge two vocabularies: add Differential Privacy (DP)
+
+    python predictor.py --window 30 --size 350 --decay 8 --task MergeVocab --outputfilename1 raw_vocab_example1.pkl --outputfilename2 raw_vocab_example2.pkl --savemodelname initglobalmodel.pkl --privacyprotect 1 --clusternumber 6
 
 Train the global model with the first dataset
 
@@ -83,7 +87,29 @@ To calculate the PTK of a target model versus the gold standard model:
 To calculate the stats of a target model including AUC:
 
     python predictor.py --window 30 --size 350 --decay 8 --task CalcStats --savemodelname trainedwithD1D2.pkl --inputfilename test_data
-
+    
+Arguments of predictor.py:
+  --window *int* the maximum distance between the current and predicted word within a sentence.
+  --size *int* the dimension of vector representations.
+  --decay *int* decay parameter in PDPS model.  Larger decay means less impact of a far-away event.
+  --task *str* "CreateVocab": create vocabulary from an input data.
+               "MergeVocab": merge two vocabularies.
+               "DNCEInit": DNCE initial train.
+               "DNCEUpdate": DNCE update train.
+               "InitTrain": initial train for naive updates or dropout udpates.  Or calculate gold standard model.
+               “NaiveUpdate”: Naive update train.
+               "DropoutUpdate": Dropout update train.
+               "CalcPTK": Calculate the PTK of one target model versus gold standard model.
+               "CalcStats": Calculate the stats including AUC. 
+  --inputfilename *str* the name of a input data file.
+  --outputfilename1 *str* the name of an output/input data file.
+  --outputfilename2 *str* the name of another output/input data file.
+  --savemodelname *str* the name of a saved model.
+  --trainedmodelname *str* the name of a trained model.
+  --goldmodelname *str* the name of a gold standard model.
+  --privacyprotect *int* whether add differential privacy in vocabulary merge process.
+  --clusternumber *int* if add privacy protection, how many clusters should be used.
+  
 ## Libraries Used
 
 This project depends on:
