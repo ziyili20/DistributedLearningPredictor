@@ -79,7 +79,7 @@ To calculate the PTK of a target model versus the gold standard model:
 
 To calculate the stats of a target model including AUC:
 
-    python predictor.py --window 30 --size 350 --decay 8 --task CalcStats --savemodelname trainedwithD1D2.pkl --inputfilename test
+    python predictor.py --window 30 --size 350 --decay 8 --task CalcStats --savemodelname trainedwithD1D2.pkl --inputfilename test_data
 
 ## Libraries Used
 
